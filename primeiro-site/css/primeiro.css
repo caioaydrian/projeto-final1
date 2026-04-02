@@ -1,3 +1,31 @@
 body {
-  background-color: #AED3E3;
+  background-color: #0f1b2e;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-section img {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  object-fit:fill;
+}
+
+.welcome-section {
+  font-style: italic;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
 }

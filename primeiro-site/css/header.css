@@ -28,7 +28,7 @@ header {
       color: rgb(49, 255, 245);
     }
 
-    img{
+    .logo-cima {
       width: 90%;
       max-width: 100px;
     }
