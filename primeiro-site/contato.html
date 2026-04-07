@@ -19,17 +19,28 @@
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
-        <li><a class="botao-jogar" href="jogo.html">Jogar</a></li>
+        <li><a class="botao-jogar" href="../primeiro-jogo/jogo-salvo/jogo-final/index.html">Jogar</a></li>
       </ul>
         </nav>
     </header>
     <main>
         <section class="contato-section">
-            <h1>Responsável pela criação do jogo</h1>
-            <p>Olá, eu sou o Caio Aydrian, o criador do jogo A Viagem Final.</p>
-            <img class="foto do criador" src="caio-cortada.jpeg" alt="foto do criador" class="foto-criador">
-            <p>Sou um estudante de Analise e Desenvolvimento de Sistemas e estou cursando o primeiro semestre. A Viagem Final é um projeto da faculdade que desenvolvi com muito esforço, e estou feliz em finalmente poder apresentá-lo.</p>
-            <p>Esse projeto foi um tanto quanto complicado de começo, mas depois de muito trabalho, e muitas horas acordado, consegui finalizar tudo e deixar do jeito que eu gostaria.</p>
+            <h1>Contato</h1>
+            <p>Olá, eu sou o Caio Aydrian, o criador do jogo A Viagem Final!</p> 
+            <p>Envie sua mensagem abaixo e eu responderei o mais rápido possível.</p>
+
+            <form class="contato-form" action="#" method="post">
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
         </section>
     </main>
 </body>
