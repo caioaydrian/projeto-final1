@@ -1,3 +1,18 @@
 body {
   background-color: #1a0033;
 }
+
+header {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1;
+  overflow: hidden;
+}
+
+.jogo-iframe {
+  width: 100% !important;
+  height: 800px !important;
+  border: none;
+}
