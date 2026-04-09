@@ -11,17 +11,16 @@ main {
   max-width: 720px;
   margin: 40px auto 60px;
   padding: 36px 32px;
-  background: #f8faf5;
   border-radius: 24px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(15, 55, 35, 0.12);
+  color: #0f3f24;
 }
 
 .contato-section h1 {
   margin-bottom: 18px;
   font-size: 2rem;
   font-weight: 700;
-  color: #0f3f24;
   text-decoration: underline solid #0f3f24 3px;
   text-underline-offset: 10px;
 }
@@ -40,18 +39,15 @@ main {
 
 .contato-form label {
   font-weight: 600;
-  color: #1d3827;
 }
 
 .contato-form input,
 .contato-form textarea {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid #c5d1c2;
+  border: 1px;
   border-radius: 14px;
-  background: #ffffff;
   font-size: 1rem;
-  color: #203227;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -70,8 +66,6 @@ main {
 .contato-form button {
   width: fit-content;
   padding: 14px 28px;
-  background-color: #0f3f24;
-  color: #ffffff;
   border: none;
   border-radius: 14px;
   font-size: 1rem;
@@ -81,8 +75,13 @@ main {
 }
 
 .contato-form button:hover {
-  background-color: #309160;
   transform: translateY(-1px);
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
 }
 
 @media (max-width: 640px) {

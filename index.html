@@ -9,27 +9,71 @@
         <link rel="stylesheet" href="primeiro-site/css/header.css">
         <link rel="stylesheet" href="primeiro-site/css/global.css">
     </head>
+    <script>
+      window.addEventListener("DOMContentLoaded", function() {
+        if (localStorage.getItem("darkMode") === "true") {
+            document.body.classList.add("dark-mode");
+            const img = document.getElementById("mode-toggle");
+        if (img) {
+          img.src = "primeiro-site/dark-mode.png";
+            img.alt = "Modo claro";
+      }
+    }
+  });
+
+  function toggleMode() {
+    const body = document.body;
+    const img = document.getElementById("mode-toggle");
+
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "true");
+      img.src = "primeiro-site/light-mode.png";
+      img.alt = "Modo claro";
+    } else {
+      localStorage.setItem("darkMode", "false");
+      img.src = "primeiro-site/dark-mode.png";
+      img.alt = "Modo escuro";
+    }
+  }
+</script>
     <body>
         <header>
     <nav>
         <div>
           <img class="logo-cima" src="primeiro-site/logo-semfundo.jpg" alt="logo principal">
         </div>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="primeiro-site/sobre.html">Sobre</a></li>
-        <li><a href="primeiro-site/contato.html">Contato</a></li>
-        <li><a class="botao-jogar" href="primeiro-site/jogo.html">Jogar</a></li>
-      </ul>
+    <ul>
+      <li>
+        <img id="mode-toggle" src="primeiro-site/dark-mode.png" alt="Alternar modo" onclick="toggleMode()">
+      </li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="primeiro-site/galeria.html">Minha Galeria</a></li>
+      <li><a href="primeiro-site/contato.html">Contato</a></li>
+      <li><a class="botao-jogar" href="primeiro-site/jogo.html">Jogar</a></li>
+    </ul>
     </nav>
         </header>
-        <section class="welcome-section">
-          <h1>Bem-vindo ao site do meu jogo!</h1>
-        </section>
         <section class="hero-section">
           <img src="primeiro-site/capa.png" alt="hero jogo" class="hero-jogo">
         </section>
     </body>
+    <main>
+        <section class="historia-section">
+            <h1>A História</h1>
+            <p>No silêncio do espaço profundo, a nave de Kharon cortava o vazio como um relâmpago solitário. Ele era conhecido como o Herói Galáctico, o guerreiro que pôs fim à Guerra Intergaláctica e salvou sua raça da extinção. Agora, depois de anos de batalhas, tudo o que restava era voltar para casa. Porém, ele descobriu que sua jornada ainda não havia terminado. Naves da antiga corporação galatica do mal retornaram para buscar vingança contra o grande Herói.</p>
+            <p>Com a ameaça iminente, Kharon se viu forçado a embarcar em uma última missão para proteger sua vida e voltar para casa em segurança. Ele sabia que enfrentaria desafios perigosos e inimigos implacáveis, mas estava determinado a cumprir sua missão final.</p>
+        </section>
+        <section class="personagem-section">
+            <h1>O Personagem Principal</h1>
+            <p>Kharon é um piloto destemido e habilidoso, conhecido por sua coragem e determinação. Sua missão é proteger a galáxia de ameaças perigosas. Kharon é um personagem complexo, com um passado misterioso e uma personalidade forte. Ele é um líder natural, capaz de inspirar aqueles ao seu redor a lutar por um futuro melhor. Com sua nave avançada e habilidades de combate excepcionais, Kharon é um herói lendário que enfrentará qualquer desafio para proteger aqueles que ama.</p>
+        </section>
+        <section class="navep-section">
+            <h1>A Nave do Personagem Principal</h1>
+            <img src="primeiro-site/imagemnaveP.png" alt="Nave do Personagem Principal" class="nave-personagem">
+        </section>
+    </main>
     <footer>
       <p>&copy; 2026 A Viagem Final. Desenvolvido por Caio Aydrian.</p>
     </footer>

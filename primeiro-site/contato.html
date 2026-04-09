@@ -9,6 +9,35 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/global.css">
 </head>
+    <script>
+      window.addEventListener("DOMContentLoaded", function() {
+        if (localStorage.getItem("darkMode") === "true") {
+            document.body.classList.add("dark-mode");
+            const img = document.getElementById("mode-toggle");
+        if (img) {
+          img.src = "../primeiro-site/dark-mode.png";
+            img.alt = "Modo claro";
+      }
+    }
+  });
+
+  function toggleMode() {
+    const body = document.body;
+    const img = document.getElementById("mode-toggle");
+
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "true");
+      img.src = "../primeiro-site/light-mode.png";
+      img.alt = "Modo claro";
+    } else {
+      localStorage.setItem("darkMode", "false");
+      img.src = "../primeiro-site/dark-mode.png";
+      img.alt = "Modo escuro";
+    }
+  }
+</script>
 <body>
     <header>
         <nav>
@@ -16,8 +45,11 @@
           <img class="logo-cima" src="logo-semfundo.jpg" alt="logo principal">
         </div>
     <ul>
+      <li>
+        <img id="mode-toggle" src="../primeiro-site/dark-mode.png" alt="Alternar modo" onclick="toggleMode()">
+      </li>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="galeria.html">Minha Galeria</a></li>
         <li><a href="contato.html">Contato</a></li>
         <li><a class="botao-jogar" href="../primeiro-site/jogo.html">Jogar</a></li>
       </ul>
@@ -44,4 +76,7 @@
         </section>
     </main>
 </body>
+    <footer>
+      <p>&copy; 2026 A Viagem Final. Desenvolvido por Caio Aydrian.</p>
+    </footer>
 </html>

@@ -9,22 +9,56 @@ body {
 }
 
 .hero-section img {
-  margin-top: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1700px;
   object-fit:fill;
+  border-radius: 20px;
 }
 
-.welcome-section {
-  font-style: italic;
-  text-align: center;
-  margin-top: 30px;
-  color: white;
+.historia-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.historia-section p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.historia-section h1 {
+  text-decoration: underline;
+}
+
+.personagem-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.personagem-section p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.personagem-section h1 {
+  text-decoration: underline;
+}
+
+.navep-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 footer {
-  background-color: #222;
-  color: white;
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
