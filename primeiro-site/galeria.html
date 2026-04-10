@@ -38,6 +38,19 @@
     }
   }
 </script>
+<script>
+function abrirModal(src) {
+  const modal = document.getElementById("modal");
+  const img = document.getElementById("img-modal");
+
+  img.src = src;
+  modal.style.display = "flex";
+}
+
+function fecharModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 <body>
     <header>
         <nav>
@@ -56,53 +69,56 @@
         </nav>
     </header>
 </body>
+    <div id="modal" class="modal" onclick="fecharModal()">
+        <img id="img-modal">
+    </div>
                 <main>
                     <div class="grid">
                         <div class="coluna">
                             <div class="card">
-                                <img src="imagemInicial.png" title="Tela Inicial">
+                                <img src="imagemInicial.png" onclick="abrirModal(this.src)" alt="Tela Inicial" title="Tela Inicial">
                                 <p>Tela Inicial</p>
                             </div>
                         </div>
                             <div class="coluna">
                             <div class="card">
-                                <img src="imagemFase1.png" alt="Primeira Fase" title="Primeira Fase">
+                                <img src="imagemFase1.png" onclick="abrirModal(this.src)" alt="Primeira Fase" title="Primeira Fase">
                                 <p>Primeira Fase</p>
                             </div>
                         </div>
                             <div class="coluna">
                             <div class="card">
-                                <img src="imagemGO.png" alt="Tela de Game Over" title="Tela de Game Over">
+                                <img src="imagemGO.png" onclick="abrirModal(this.src)" alt="Tela de Game Over" title="Tela de Game Over">
                                 <p>Tela de Game Over</p>
                             </div>
                         </div>
                             <div class="coluna">
                             <div class="card">
-                                <img src="imagemDetNave.png" alt="Nave Personagem Principal" title="Nave Personagem Principal">
+                                <img src="imagemDetNave.png" onclick="abrirModal(this.src)" alt="Nave Personagem Principal" title="Nave Personagem Principal">
                                 <p>Nave Personagem Principal</p>
                             </div>
                         </div>
                             <div class="coluna">
                             <div class="card">
-                                <img src="imagemEventos.png" alt="Eventos" title="Folha de Eventos">
+                                <img src="imagemEventos.png" onclick="abrirModal(this.src)" alt="Eventos" title="Folha de Eventos">
                                 <p>Folha de Eventos</p>
                             </div>
                         </div>
                             <div class="coluna">
                             <div class="card">
-                                <img src="imagemChefao.png" alt="Final Boss" title="Final Boss">
+                                <img src="imagemChefao.png" onclick="abrirModal(this.src)" alt="Final Boss" title="Final Boss">
                                 <p>Final Boss</p>
                             </div>
                         </div>
                             <div class="coluna">
                             <div class="card">
-                                <img src="imagemFeL.png" alt="Folhas e Eventos" title="Folhas e Eventos">
+                                <img src="imagemFeL.png" onclick="abrirModal(this.src)" alt="Folhas e Eventos" title="Folhas e Eventos">
                                 <p>Folhas e Eventos</p>
                             </div>
                         </div>
                             <div class="coluna">
                             <div class="card">
-                                <img src="imagemObjetos.png" alt="Objetos" title="Objetos do Jogo">
+                                <img src="imagemObjetos.png" onclick="abrirModal(this.src)" alt="Objetos" title="Objetos do Jogo">
                                 <p>Objetos do Jogo</p>
                             </div>
                         </div>

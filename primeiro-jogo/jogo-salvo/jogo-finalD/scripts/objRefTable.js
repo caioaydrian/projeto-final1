@@ -36,12 +36,15 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
+		C3.JavaScriptInEvents.Folhajogo1_Event11_Act1,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
-		C3.Plugins.System.Acts.GoToLayout,
+		C3.JavaScriptInEvents.Folhajogo1_Event12_Act4,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
 		C3.Plugins.TiledBg.Acts.SetImageOffsetX,
 		C3.Plugins.TiledBg.Exps.ImageOffsetX,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.JavaScriptInEvents.Folhajogo2_Event10_Act5,
 		C3.Plugins.Mouse.Exps.X,
 		C3.Plugins.Mouse.Exps.Y,
 		C3.Plugins.Mouse.Cnds.OnClick,
@@ -49,7 +52,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse.Cnds.OnRelease,
 		C3.Plugins.Audio.Acts.StopAll,
 		C3.Plugins.System.Cnds.OnLayoutEnd,
-		C3.Plugins.Keyboard.Cnds.OnAnyKey
+		C3.Plugins.Keyboard.Cnds.OnAnyKey,
+		C3.JavaScriptInEvents["Folha-Vitoria_Event2_Act1"]
 	];
 };
 self.C3_JsPropNameTable = [
@@ -89,7 +93,9 @@ self.C3_JsPropNameTable = [
 	{TextoGOver: 0},
 	{naveGO: 0},
 	{reiniciar: 0},
-	{Áudio: 0}
+	{Áudio: 0},
+	{PlanoDeFundoEmBlocos: 0},
+	{navefinal: 0}
 ];
 
 self.InstanceType = {
@@ -120,5 +126,7 @@ self.InstanceType = {
 	TextoGOver: class extends self.ITextInstance {},
 	naveGO: class extends self.ISpriteInstance {},
 	reiniciar: class extends self.ISpriteFontInstance {},
-	Áudio: class extends self.IInstance {}
+	Áudio: class extends self.IInstance {},
+	PlanoDeFundoEmBlocos: class extends self.ITiledBackgroundInstance {},
+	navefinal: class extends self.ISpriteInstance {}
 }
