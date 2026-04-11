@@ -9,34 +9,61 @@
         <link rel="stylesheet" href="primeiro-site/css/header.css">
         <link rel="stylesheet" href="primeiro-site/css/global.css">
     </head>
-    <script>
-      window.addEventListener("DOMContentLoaded", function() {
-        if (localStorage.getItem("darkMode") === "true") {
-            document.body.classList.add("dark-mode");
-            const img = document.getElementById("mode-toggle");
-        if (img) {
-          img.src = "primeiro-site/dark-mode.png";
-            img.alt = "Modo claro";
-      }
-    }
-  });
+<script>
+window.addEventListener("DOMContentLoaded", function() {
 
-  function toggleMode() {
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+        const img = document.getElementById("mode-toggle");
+        if (img) {
+            img.src = "primeiro-site/dark-mode.png";
+            img.alt = "Modo claro";
+        }
+    }
+
+    let nome = prompt("Qual é o seu nome?");
+    let idade = prompt("Qual é a sua idade?");
+
+    if (!nome || !idade) {
+        alert("Você precisa preencher os dados para entrar no site.");
+        location.reload();
+        return;
+    }
+
+    idade = parseInt(idade);
+
+    if (isNaN(idade)) {
+        alert("Por favor, digite uma idade válida.");
+        location.reload();
+        return;
+    }
+
+    if (idade < 12) {
+        alert("Acesso negado. Este site é permitido apenas para maiores de 12 anos.");
+        document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>Acesso bloqueado</h1>";
+        return;
+    }
+
+    alert("Bem-vindo(a), " + nome + "!");
+
+});
+
+function toggleMode() {
     const body = document.body;
     const img = document.getElementById("mode-toggle");
 
     body.classList.toggle("dark-mode");
 
     if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("darkMode", "true");
-      img.src = "primeiro-site/light-mode.png";
-      img.alt = "Modo claro";
+        localStorage.setItem("darkMode", "true");
+        img.src = "primeiro-site/light-mode.png";
+        img.alt = "Modo claro";
     } else {
-      localStorage.setItem("darkMode", "false");
-      img.src = "primeiro-site/dark-mode.png";
-      img.alt = "Modo escuro";
+        localStorage.setItem("darkMode", "false");
+        img.src = "primeiro-site/dark-mode.png";
+        img.alt = "Modo escuro";
     }
-  }
+}
 </script>
     <body>
         <header>
