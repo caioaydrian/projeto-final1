@@ -15,6 +15,10 @@ body {
   border-radius: 20px;
 }
 
+.historia-section h1 {
+  text-decoration: underline;
+}
+
 .historia-section {
   max-width: 800px;
   margin: 50px auto;
@@ -29,13 +33,9 @@ body {
   line-height: 1.6;
 }
 
-.historia-section h1 {
-  text-decoration: underline;
-}
-
 .personagem-section {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 30px auto;
   padding: 20px;
   border-radius: 8px;
 }
