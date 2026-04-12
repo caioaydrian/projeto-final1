@@ -41,3 +41,31 @@ header {
       width: 90%;
       max-width: 100px;
     }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+}
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+}
+
+      header {
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+}
+
+      .logo-cima {
+        max-width: 80px;
+}
+
+      #mode-toggle {
+        width: 25px;
+        height: 25px;
+}
+}

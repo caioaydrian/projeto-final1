@@ -20,32 +20,6 @@ window.addEventListener("DOMContentLoaded", function() {
             img.alt = "Modo claro";
         }
     }
-
-    let nome = prompt("Qual é o seu nome?");
-    let idade = prompt("Qual é a sua idade?");
-
-    if (!nome || !idade) {
-        alert("Você precisa preencher os dados para entrar no site.");
-        location.reload();
-        return;
-    }
-
-    idade = parseInt(idade);
-
-    if (isNaN(idade)) {
-        alert("Por favor, digite uma idade válida.");
-        location.reload();
-        return;
-    }
-
-    if (idade < 12) {
-        alert("Acesso negado. Este site é permitido apenas para maiores de 12 anos.");
-        document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>Acesso bloqueado</h1>";
-        return;
-    }
-
-    alert("Bem-vindo(a), " + nome + "!");
-
 });
 
 function toggleMode() {
@@ -85,26 +59,57 @@ function toggleMode() {
         <section class="hero-section">
           <img src="primeiro-site/capa.png" alt="hero jogo" class="hero-jogo">
         </section>
-    </body>
-    <main>
-        <section class="historia-section">
-            <h1>A História</h1>
-            <p>Após encerrar uma devastadora guerra intergaláctica e salvar sua raça da extinção, Kharon, o lendário Herói Galáctico, atravessa o vazio do espaço rumo ao seu planeta natal, Aeryon, acreditando que finalmente poderá descansar. Marcado por batalhas e perdas, ele carrega consigo não apenas a vitória, mas também o peso de tudo o que precisou enfrentar para alcançá-la.</p>
-            <p>A tranquilidade, porém, dura pouco. Ao se aproximar de casa, um alerta inesperado rompe o silêncio: forças inimigas surgem das sombras, remanescentes da guerra que se recusam a aceitar o fim do conflito. Subitamente cercado, Kharon se vê novamente no campo de batalha, enfrentando uma ameaça que parecia já ter sido superada.</p>
-            <p>Em meio a uma intensa perseguição espacial, com disparos cruzando o vazio e mísseis vindo de todas as direções, ele utiliza toda sua habilidade e precisão para sobreviver. Mesmo em desvantagem numérica e com sua nave sendo danificada, Kharon mantém o controle, mostrando por que se tornou uma lenda.</p>
-            <p>O confronto atinge seu ápice quando um antigo comandante inimigo surge, determinado a acabar com ele de uma vez por todas. Nesse duelo final, Kharon precisa reunir tudo o que aprendeu para derrotar seu adversário e encerrar, de fato, os últimos vestígios da guerra.</p>
-            <p>Ao destruir a ameaça final e finalmente contemplar Aeryon no horizonte, ele percebe que a paz conquistada teve um alto custo — e que suas cicatrizes jamais desaparecerão. Ainda assim, segue em frente, pois entende que ser um herói não significa apenas vencer batalhas, mas continuar lutando pelo que importa, mesmo quando tudo parece ter acabado.</p>
+        <main class="conteudo-sensivel">
+            <section class="historia-section">
+                <h1>A História</h1>
+                <p>Após encerrar uma devastadora guerra intergaláctica e salvar sua raça da extinção, Kharon, o lendário Herói Galáctico, atravessa o vazio do espaço rumo ao seu planeta natal, Aeryon, acreditando que finalmente poderá descansar. Marcado por batalhas e perdas, ele carrega consigo não apenas a vitória, mas também o peso de tudo o que precisou enfrentar para alcançá-la.</p>
+                <p>A tranquilidade, porém, dura pouco. Ao se aproximar de casa, um alerta inesperado rompe o silêncio: forças inimigas surgem das sombras, remanescentes da guerra que se recusam a aceitar o fim do conflito. Subitamente cercado, Kharon se vê novamente no campo de batalha, enfrentando uma ameaça que parecia já ter sido superada.</p>
+                <p>Em meio a uma intensa perseguição espacial, com disparos cruzando o vazio e mísseis vindo de todas as direções, ele utiliza toda sua habilidade e precisão para sobreviver. Mesmo em desvantagem numérica e com sua nave sendo danificada, Kharon mantém o controle, mostrando por que se tornou uma lenda.</p>
+                <p>O confronto atinge seu ápice quando um antigo comandante inimigo surge, determinado a acabar com ele de uma vez por todas. Nesse duelo final, Kharon precisa reunir tudo o que aprendeu para derrotar seu adversário e encerrar, de fato, os últimos vestígios da guerra.</p>
+                <p>Ao destruir a ameaça final e finalmente contemplar Aeryon no horizonte, ele percebe que a paz conquistada teve um alto custo — e que suas cicatrizes jamais desaparecerão. Ainda assim, segue em frente, pois entende que ser um herói não significa apenas vencer batalhas, mas continuar lutando pelo que importa, mesmo quando tudo parece ter acabado.</p>
+            </section>
+            <section class="personagem-section">
+                <h1>O Personagem Principal</h1>
+                <p>Kharon é um piloto destemido e habilidoso, conhecido por sua coragem e determinação. Sua missão é proteger a galáxia de ameaças perigosas. Kharon é um personagem complexo, com um passado misterioso e uma personalidade forte. Ele é um líder natural, capaz de inspirar aqueles ao seu redor a lutar por um futuro melhor. Com sua nave avançada e habilidades de combate excepcionais, Kharon é um herói lendário que enfrentará qualquer desafio para proteger aqueles que ama.</p>
+            </section>
+            <section class="navep-section">
+                <h1>A Nave do Personagem Principal</h1>
+                <img src="primeiro-site/imagemnaveP.png" alt="Nave do Personagem Principal" class="nave-personagem">
+            </section>
+        </main>
+        <section class="info-jogo">
+            <h2 id="nome-jogo"></h2>
+            <p id="dev-jogo"></p>
+            <p id="genero-jogo"></p>
+            <p id="plataforma-jogo"></p>
+            <p id="preco-jogo"></p>
+            <p id="class-jogo"></p>
         </section>
-        <section class="personagem-section">
-            <h1>O Personagem Principal</h1>
-            <p>Kharon é um piloto destemido e habilidoso, conhecido por sua coragem e determinação. Sua missão é proteger a galáxia de ameaças perigosas. Kharon é um personagem complexo, com um passado misterioso e uma personalidade forte. Ele é um líder natural, capaz de inspirar aqueles ao seu redor a lutar por um futuro melhor. Com sua nave avançada e habilidades de combate excepcionais, Kharon é um herói lendário que enfrentará qualquer desafio para proteger aqueles que ama.</p>
-        </section>
-        <section class="navep-section">
-            <h1>A Nave do Personagem Principal</h1>
-            <img src="primeiro-site/imagemnaveP.png" alt="Nave do Personagem Principal" class="nave-personagem">
-        </section>
-    </main>
+        <script>
+            const nomejogo = "A Viagem Final";
+            const devjogo = "Caio Aydrian";
+            const generojogo = "Ação, Aventura, Ficção Científica";
+            const plataformajogo = "PC";
+            const precojogo = "R$ 49,99";
+            const classjogo = "12+";
+    
+            document.getElementById("nome-jogo").textContent = nomejogo;
+            document.getElementById("dev-jogo").textContent = "Desenvolvedor: " + devjogo;
+            document.getElementById("genero-jogo").textContent = "Gênero: " + generojogo;
+            document.getElementById("plataforma-jogo").textContent = "Plataforma: " + plataformajogo;
+            document.getElementById("preco-jogo").textContent = "Preço: " + precojogo;
+            document.getElementById("class-jogo").textContent = "Classificação: " + classjogo;
+
+            const ANO_LANCAMENTO = 2026;
+            let anoatual = new Date().getFullYear();
+
+            if (anoatual == ANO_LANCAMENTO) {
+                alert("O jogo A Viagem Final foi lançado este ano! Aproveite para jogar!");
+            }
+        </script>
     <footer>
       <p>&copy; 2026 A Viagem Final. Desenvolvido por Caio Aydrian.</p>
     </footer>
+</body>
+    <script src="primeiro-site/js/idade.js"></script>
 </html>
